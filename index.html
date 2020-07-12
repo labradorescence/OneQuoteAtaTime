@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="index.js" defer></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+  <center>
+  <div id="card" class="card">
+    <div id="quote-card-frame" class="quote-card-frame">
+        <!-- class quoteDivCard  -->
+    </div>
+
+    <div id="buttons" class="buttons">
+    <button class='pencil'>📝</button> &nbsp;&nbsp;
+    <button class='empty-heart' className = "heart">🤍</button>&nbsp;&nbsp;
+    <button class="trash">🗑</button>
+    </div>
+
+    <div class="container" style = "display:none" >
+      <form class="add-quote-form">
+      <input 
+        style="height:150px;
+              width:70%;
+              font-size:12pt;"
+        type="text"
+        name="content"
+        value=""
+        placeholder="Enter a quote..."
+        class="input-text"
+      />
+      <br />
+
+      <input
+        style="
+        width:70%;
+        font-size:12pt;"
+        type="text"
+        name="author"
+        value=""
+        placeholder="Author(optional)"
+        class="input-text"
+      />
+      <br />
+          <!-- 
+          <input
+            type="text"
+            name="image"
+            value=""
+            placeholder="Enter a quote's image URL..."
+            class="input-text"
+          />
+          <br />
+
+          <input
+            type="text"
+            name="category"
+            value=""
+            placeholder="Optional: Enter category..."
+            class="input-text"
+        />
+        <br /> -->
+
+      <input
+      style="
+      width:70%;
+      font-size:12pt;"
+        type="submit"
+        name="submit"
+        value="save"
+        class="submit"
+      />
+      <br />
+      <br>
+      </form>
+    </div>
+  </div>
+  </center>
+</body>
+</html>
+

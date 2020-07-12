@@ -1,0 +1,44 @@
+.unstyled-button {
+    border: none;
+    padding: 0;
+    background: none;
+  }
+  
+  div {
+    background: beige;
+    margin: 5% ;
+  }
+  
+
+  /* https://jsfiddle.net/Vestride/dkr9b/ */
+
+
+  .quote-card-frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+
+  }
+
+  .pencil {
+    font-size:48px; 
+    padding: 0;
+    border: none;
+    background: none;
+  }
+  .empty-heart {
+    font-size:48px; 
+    padding: 0;
+    border: none;
+    background: none;
+  }
+  .trash {
+    font-size:48px; 
+    padding: 0;
+    border: none;
+    background: none;
+  }
+
+  .container {
+  }
