@@ -1,5 +1,5 @@
 /**********************  DOM Elements  ***********************/
-const adapter = new APIAdapter("https://one-quote-at-a-time.herokuapp.com/")
+const adapter = new APIAdapter("https://one-quote-at-a-time.herokuapp.com/api/v1/")
 
 let addQuote = false;
 
