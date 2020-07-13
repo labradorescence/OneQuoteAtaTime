@@ -1,7 +1,6 @@
-One Quote At A Time
-========================
+## One Quote At A Time  ✌ 💬  ✌
 
-One Quote At A Time is a full-stack, vanila JS frontend and Rails backend, web application where you can view quotes to help you go through hard time, to get stuff done, to study, to focus and to get inspired by. 
+One Quote At A Time is a full-stack, vanilla JS frontend and Rails backend, web application where you can view quotes to help you go through hard time, to get stuff done, to study, to focus and to get inspired by. 
 
 Live demo: heroku
 
@@ -9,8 +8,9 @@ Live demo: heroku
 
 
 ## Getting Started
+* (Backend: https://github.com/labradorescence/OneQuoteAtaTime-back)
     1. Clone this frontend repository onto your local machine.
-    2. Clone backend, Ruby on Rails API (Backend: https://github.com/labradorescence/OneQuoteAtaTime-back) onto your local machine. 
+    2. Clone backend, Ruby on Rails API link above onto your local machine. 
     3. Run `bundle install` to download all the necessary gems.
     4. Once you've installed everything smoothly, run `rails s` in the backend. 
     5. Run `open index.html` to start the app!
