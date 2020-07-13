@@ -1,5 +1,5 @@
 /**********************  DOM Elements  ***********************/
-const adapter = new APIAdapter("https://one-quote-at-a-time.herokuapp.com/api/v1/")
+//const adapter = new APIAdapter("https://one-quote-at-a-time.herokuapp.com/api/v1/quotes")
 
 let addQuote = false;
 
@@ -17,7 +17,9 @@ const quoteForm = document.querySelector(".add-quote-form")
 
 const wholePage = document //!!!!!******** is this okay???????????????
 
-let request = "http://localhost:3000/api/v1/quotes/"
+let request = "https://one-quote-at-a-time.herokuapp.com/api/v1/quotes/"
+
+
 
 
 //Each page click, each quote 
@@ -78,7 +80,7 @@ quoteForm.addEventListener("submit", e => {
 //************************ FETCH UPDATE *****************************/
 wholePage.addEventListener("click", e => {
 
-    console.log("likes",quoteArr[arrIndexNum].likes)
+    //console.log("likes",quoteArr[arrIndexNum].likes)
     if(!quoteArr[arrIndexNum].likes){ //null and 0 
         emptLikeBtn.innerHTML =  "🤍" //emp
     }else{
