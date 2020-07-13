@@ -1,7 +1,7 @@
 One Quote At A Time
 ========================
 
-One Quote At A Time is a full-stack, JS front end and Rails backend, web application where you can view quotes to help you go through hard time, to get stuff done, to study, to focus and to get inspired by. 
+One Quote At A Time is a full-stack, vanila JS frontend and Rails backend, web application where you can view quotes to help you go through hard time, to get stuff done, to study, to focus and to get inspired by. 
 
 Live demo: heroku
 
