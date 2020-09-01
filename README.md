@@ -2,7 +2,7 @@
 
 One Quote At A Time is a full-stack, vanilla JS frontend and Rails backend, web application where you can view quotes to help you go through hard time, to get stuff done, to study, to focus and to get inspired by. 
 
-Live demo: https://labradorescence.github.io/OneQuoteAtaTime-front/
+Live demo: https://labradorescence.github.io/OneQuoteAtaTime/
 
 ![One Quote At A Time screen shot](https://user-images.githubusercontent.com/52639837/87259873-4e7c9e00-c47c-11ea-820c-9e7244064272.png)
 
