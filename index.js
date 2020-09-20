@@ -82,7 +82,7 @@ wholePage.addEventListener("click", e => {
 
     console.log("likes",quoteArr[arrIndexNum].likes)
     if(!quoteArr[arrIndexNum].likes){ //null and 0 
-        emptLikeBtn.innerHTML =  "🤍" //emp
+        emptLikeBtn.innerHTML =  "♡" //emp
     }else{
         emptLikeBtn.innerHTML = "❤️️"
     }
@@ -102,13 +102,13 @@ wholePage.addEventListener("click", e => {
         //console.log(quoteCard)//false???
         quoteArr[arrIndexNum].likes = quoteArr[arrIndexNum].likes
 
-        if( e.target.innerHTML === "🤍" ){
+        if( e.target.innerHTML === "♡" ){
         // if( quoteArr[arrIndexNum].likes === 0 ){
             e.target.innerHTML =  "❤️️" //emp
             quoteArr[arrIndexNum].likes = 1
         //console.log(currentNum)
         }else{
-            e.target.innerHTML = "🤍"
+            e.target.innerHTML = "♡"
             quoteArr[arrIndexNum].likes = 0
         }
         //console.log(currentNum) 
