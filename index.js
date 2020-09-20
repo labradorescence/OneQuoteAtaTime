@@ -80,7 +80,7 @@ quoteForm.addEventListener("submit", e => {
 //************************ FETCH UPDATE *****************************/
 wholePage.addEventListener("click", e => {
 
-    //console.log("likes",quoteArr[arrIndexNum].likes)
+    console.log("likes",quoteArr[arrIndexNum].likes)
     if(!quoteArr[arrIndexNum].likes){ //null and 0 
         emptLikeBtn.innerHTML =  "🤍" //emp
     }else{
@@ -191,7 +191,7 @@ wholePage.addEventListener("click", e => {
 
 /****************************  Render Helpers  ***************************/
 function renderOneQuote(eachQuoteObj){
-    console.log(eachQuoteObj.id)
+    //console.log(eachQuoteObj.id)
     console.log(eachQuoteObj.content)
     quoteDivcard.innerHTML = ``//empty the quoteDivcard first!
 
