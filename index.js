@@ -1,10 +1,27 @@
+/**********************  loader ***********************/
+   document.onreadystatechange = function() { 
+            if (document.readyState !== "complete") { 
+                document.querySelector( 
+                  "body").style.visibility = "hidden"; 
+                document.querySelector( 
+                  "#loader").style.visibility = "visible"; 
+            } else { 
+                document.querySelector( 
+                  "#loader").style.display = "none"; 
+                document.querySelector( 
+                  "body").style.visibility = "visible"; 
+            } 
+        }; 
+
+
+
 /**********************  DOM Elements  ***********************/
 //const adapter = new APIAdapter("https://one-quote-at-a-time.herokuapp.com/api/v1/quotes")
 
 let addQuote = false;
 
-console.log(addQuote)
-console.log("successss!!!")
+//console.log(addQuote)
+//console.log("successss!!!")
 
 const quoteDivcard = document.querySelector("#quote-card-frame")
 const addBtn = document.querySelector(".pencil")
@@ -31,7 +48,7 @@ let arrIndexNum = 0
 fetch(request)
     .then(r => r.json())
     .then(data => {
-        console.log(data)
+       // console.log(data)
         quoteArr = data
 
         renderOneQuote(quoteArr[arrIndexNum])     
@@ -44,7 +61,7 @@ fetch(request)
 
 
 
-
+/*********************** ADD A QUOTE ***************************/
 /*********************** FETCH CREATE ***************************/
 /*************  Event Handler :: gather form submit data  **************/
 quoteForm.addEventListener("submit", e => {
@@ -55,7 +72,7 @@ quoteForm.addEventListener("submit", e => {
         author: e.target.author.value,
         likes: 0
         }
-    console.log(quoteObj)
+    //console.log(quoteObj)
 
     fetch("http://localhost:3000/api/v1/quotes/", {
         method: 'POST',
@@ -76,11 +93,11 @@ quoteForm.addEventListener("submit", e => {
   })
 
 
-
+/*********************** QUOTE LIKES ***************************/
 //************************ FETCH UPDATE *****************************/
 wholePage.addEventListener("click", e => {
 
-    console.log("likes",quoteArr[arrIndexNum].likes)
+   // console.log("likes",quoteArr[arrIndexNum].likes)
     if(!quoteArr[arrIndexNum].likes){ //null and 0 
         emptLikeBtn.innerHTML =  "♡" //emp
     }else{
@@ -96,8 +113,6 @@ wholePage.addEventListener("click", e => {
         const quoteCard = cardFrame.querySelector(".quote-card")
         let quoteId = quoteCard.dataset.id
     
-        
-
         
         //console.log(quoteCard)//false???
         quoteArr[arrIndexNum].likes = quoteArr[arrIndexNum].likes
@@ -171,8 +186,8 @@ wholePage.addEventListener("click", e => {
     
         //debugger
         
-        console.log("lez go")
-        console.log(" <3 *** <3 ")
+       // console.log("lez go")
+        //console.log(" <3 *** <3 ")
         
         if(arrIndexNum === quoteArr.length-1){
             arrIndexNum = 0
@@ -192,7 +207,7 @@ wholePage.addEventListener("click", e => {
 /****************************  Render Helpers  ***************************/
 function renderOneQuote(eachQuoteObj){
     //console.log(eachQuoteObj.id)
-    console.log(eachQuoteObj.content)
+   // console.log(eachQuoteObj.content)
     quoteDivcard.innerHTML = ``//empty the quoteDivcard first!
 
     const cardFrame = document.createElement("div")
@@ -229,7 +244,7 @@ function renderOneQuote(eachQuoteObj){
 //********* when pencil Btn gets clicked, show quoteFormContainer ******//
 addBtn.addEventListener("click", (e) => {
     e.preventDefault()
-    console.log(addQuote) //false(currently)
+    //console.log(addQuote) //false(currently)
     addQuote = !addQuote //true //if pencilBtn clicked, then turn true
     console.log(addQuote)//true (now it is)
 
