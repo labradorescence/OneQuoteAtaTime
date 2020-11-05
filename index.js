@@ -4,14 +4,22 @@ const emoji = loader.querySelector('.emoji');
 
 const emojis = ["🕐", "🕑", "🕒", "🕓", "🕔", "🕕", "🕖", "🕗", "🕘", "🕙", "🕚", "🕛", "🕜", "🕝", "🕞", "🕟", "🕠", "🕡", "🕢", "🕣", "🕤", "🕥", "🕦", "🕧"];
 
-const interval = 125;
+const interval = 500;
 
 const loadEmojis = (arr) => {
-  setInterval(() => {
-    emoji.innerText = arr[Math.floor(Math.random() * arr.length)];
-    //console.log(Math.floor(Math.random() * arr.length))
-  }, interval);
+
+      setInterval(() => {
+        let i = 0
+        while(i < arr.length){
+        emoji.innerText = arr[i]; 
+        i++
+        console.log(i)
+        }
+    }, interval);
 }
+
+        //console.log(Math.floor(Math.random() * arr.length))
+       // console.log(Math.randomOrder())
 
 const init = () => {
   loadEmojis(emojis);
@@ -22,6 +30,17 @@ init();
 
 //loader stopper is located in the initial fetch 
 
+
+
+// if(arrIndexNum === quoteArr.length-1){
+//     arrIndexNum = 0
+//     renderOneQuote(quoteArr[arrIndexNum])
+//     arrIndexNum++ 
+// }
+// else if(arrIndexNum < quoteArr.length){  
+//     renderOneQuote(quoteArr[arrIndexNum])
+//     arrIndexNum++
+// }
 
 /**********************  DOM Elements  ***********************/
 //const adapter = new APIAdapter("https://one-quote-at-a-time.herokuapp.com/api/v1/quotes")
