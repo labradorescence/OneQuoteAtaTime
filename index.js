@@ -1,17 +1,4 @@
 /**********************  loader ***********************/
-//    document.onreadystatechange = function() { 
-//        console.log(document.readyState)
-//             if (document.readyState !== "complete") { 
-//                 //debugger
-//                 document.querySelector("body").style.visibility = "hidden"; 
-//                 document.querySelector(".preload").style.visibility = "visible"; 
-//             } else { 
-//                // debugger
-//                 document.querySelector(".preload").style.display = "none"; 
-//                 document.querySelector("body").style.visibility = "visible"; 
-//             } 
-//         }; 
-
 const loader = document.querySelector('.preload');
 const emoji = loader.querySelector('.emoji');
 
@@ -22,7 +9,7 @@ const interval = 125;
 const loadEmojis = (arr) => {
   setInterval(() => {
     emoji.innerText = arr[Math.floor(Math.random() * arr.length)];
-    console.log(Math.floor(Math.random() * arr.length))
+    //console.log(Math.floor(Math.random() * arr.length))
   }, interval);
 }
 
@@ -33,8 +20,7 @@ const init = () => {
 
 init();
 
-
-
+//loader stopper is located in the initial fetch 
 
 
 /**********************  DOM Elements  ***********************/
@@ -71,9 +57,12 @@ fetch(request)
     .then(r => r.json())
     .then(data => {
        // console.log(data)
-        quoteArr = data
+       document.querySelector(".preload").style.display = "none"//stop the load 
 
-        renderOneQuote(quoteArr[arrIndexNum])     
+       quoteArr = data
+
+        renderOneQuote(quoteArr[arrIndexNum])  
+
         // data.forEach(eachObj => {
         //   renderOneQuote(eachObj)
     // }
@@ -276,3 +265,4 @@ addBtn.addEventListener("click", (e) => {
       quoteFormContainer.style.display = "none"// element will not be displayed
     }
 })
+
