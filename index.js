@@ -1,14 +1,16 @@
 /**********************  loader ***********************/
-   document.onreadystatechange = function() { 
-       console.log(document.readyState)
-            if (document.readyState !== "complete") { 
-                document.querySelector("body").style.visibility = "hidden"; 
-                document.querySelector(".loader").style.visibility = "visible"; 
-            } else { 
-                document.querySelector(".loader").style.display = "none"; 
-                document.querySelector("body").style.visibility = "visible"; 
-            } 
-        }; 
+//    document.onreadystatechange = function() { 
+//        console.log(document.readyState)
+//             if (document.readyState !== "complete") { 
+//                 //debugger
+//                 document.querySelector("body").style.visibility = "hidden"; 
+//                 document.querySelector(".preload").style.visibility = "visible"; 
+//             } else { 
+//                // debugger
+//                 document.querySelector(".preload").style.display = "none"; 
+//                 document.querySelector("body").style.visibility = "visible"; 
+//             } 
+//         }; 
 
 
 
