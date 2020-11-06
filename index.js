@@ -4,17 +4,15 @@ const emoji = loader.querySelector('.emoji');
 
 const emojis = ["🕐", "🕜", "🕑","🕝", "🕒", "🕞", "🕓", "🕟", "🕔", "🕠", "🕕", "🕡", "🕖", "🕢",  "🕗", "🕣", "🕘", "🕤", "🕙",  "🕥", "🕚", "🕦",  "🕛", "🕧"];
 
-const interval = 135;
+const interval = 125;
+
 const loadEmojis = (arr) => {
-      setInterval(() => {
-        let i = 0
-        while(i < arr.length){
-        emoji.innerText = arr[i]; 
-        i++
-        //console.log(emoji.innerText)
-        }
+    setInterval(() => {
+      emoji.innerText = arr[Math.floor(Math.random() * arr.length)];
+      console.log(Math.floor(Math.random() * arr.length))
     }, interval);
 }
+
 const init = () => {
   loadEmojis(emojis);
 }

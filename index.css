@@ -23,6 +23,10 @@
         }  */
 
 
+
+
+
+
         /* this only works on safari lol
         .preload {
           border: 16px solid #f3f3f3;
@@ -42,6 +46,13 @@
           100% { transform: rotate(360deg); }
         } */
 
+
+
+
+
+
+
+        
 
         .preload {
           height: 100vh;
