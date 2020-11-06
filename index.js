@@ -4,43 +4,60 @@ const emoji = loader.querySelector('.emoji');
 
 const emojis = ["🕐", "🕜", "🕑","🕝", "🕒", "🕞", "🕓", "🕟", "🕔", "🕠", "🕕", "🕡", "🕖", "🕢",  "🕗", "🕣", "🕘", "🕤", "🕙",  "🕥", "🕚", "🕦",  "🕛", "🕧"];
 
-const interval = 500;
-
+const interval = 135;
 const loadEmojis = (arr) => {
-
       setInterval(() => {
         let i = 0
         while(i < arr.length){
         emoji.innerText = arr[i]; 
         i++
-        console.log(i)
+        //console.log(emoji.innerText)
         }
     }, interval);
 }
-
-        //console.log(Math.floor(Math.random() * arr.length))
-       // console.log(Math.randomOrder())
-
 const init = () => {
   loadEmojis(emojis);
- 
 }
-
 init();
-
 //loader stopper is located in the initial fetch 
 
 
+// const interval = 135;
+// const loadEmojis = (emojis) => {
+//       setInterval(() => {
+//         let i = 0;
+//         if(i === emojis.length-1){
+//             i = 0
+//             emoji.innerText = emojis[i]
+//             i++ 
+//             console.log(emoji.innerText)
+//         }
+//         else if(i < emojis.length){  
+//             emoji.innerText = emojis[i]
+//             i++
+//             console.log(emoji.innerText)
+//         }
+//     }, interval);
+// }
+//       const init = () => {
+//       loadEmojis(emojis);
+// }
+// init();
 
-// if(arrIndexNum === quoteArr.length-1){
-//     arrIndexNum = 0
-//     renderOneQuote(quoteArr[arrIndexNum])
-//     arrIndexNum++ 
+
+// let i = 0;
+// if(i === emojis.length-1){
+//     i = 0
+//     emoji.innerText = emojis[i]
+//     i++ 
 // }
-// else if(arrIndexNum < quoteArr.length){  
-//     renderOneQuote(quoteArr[arrIndexNum])
-//     arrIndexNum++
+// else if(i < emojis.length){  
+//     emoji.innerText = emojis[i]
+//     i++
 // }
+//console.log(emoji.innerText)
+
+
 
 /**********************  DOM Elements  ***********************/
 //const adapter = new APIAdapter("https://one-quote-at-a-time.herokuapp.com/api/v1/quotes")
@@ -79,8 +96,7 @@ fetch(request)
        document.querySelector(".preload").style.display = "none"//stop the load 
 
        quoteArr = data
-
-        renderOneQuote(quoteArr[arrIndexNum])  
+       renderOneQuote(quoteArr[arrIndexNum])  
 
         // data.forEach(eachObj => {
         //   renderOneQuote(eachObj)
