@@ -86,7 +86,7 @@ quoteForm.addEventListener("submit", e => {
         }
     //console.log(quoteObj)
 
-    fetch("http://localhost:3000/api/v1/quotes/", {
+    fetch(request, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -100,7 +100,7 @@ quoteForm.addEventListener("submit", e => {
            // console.log(actualNewQuote)
             quoteArr.push(actualNewQuote)
             //console.log(quoteArr)
-            // renderOneQuote(quoteObj) ////do i not need this???????
+            renderOneQuote(quoteObj) ////do i not need this???????
         })
   })
 
@@ -226,7 +226,6 @@ function renderOneQuote(eachQuoteObj){
     cardFrame.classList.add("quote-card")
     
     cardFrame.dataset.id = eachQuoteObj.id //for fetch 2 
-    cardFrame.dataset.reiIanJack = "nice guys"//<div class="card" data-id="2" data-rei="nice guy">
 
     //** img */
     // const img = document.createElement("img")
