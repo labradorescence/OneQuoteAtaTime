@@ -100,7 +100,7 @@ quoteForm.addEventListener("submit", e => {
            // console.log(actualNewQuote)
             quoteArr.push(actualNewQuote)
             //console.log(quoteArr)
-            renderOneQuote(quoteObj) ////do i not need this???????
+            renderOneQuote(quoteObj) ////this refreshes the page with the new quote
         })
   })
 
@@ -147,7 +147,7 @@ wholePage.addEventListener("click", e => {
             "Accept": "application/json",//update the obj
         },
         body: JSON.stringify({
-            likes: quoteArr[arrIndexNum].likes //HOW CAN I CHECK ??? rails c ?? postman
+            likes: quoteArr[arrIndexNum].likes 
         })
         })
     }
