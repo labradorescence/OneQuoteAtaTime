@@ -20,41 +20,6 @@ init();
 //loader stopper is located in the initial fetch 
 
 
-// const interval = 135;
-// const loadEmojis = (emojis) => {
-//       setInterval(() => {
-//         let i = 0;
-//         if(i === emojis.length-1){
-//             i = 0
-//             emoji.innerText = emojis[i]
-//             i++ 
-//             console.log(emoji.innerText)
-//         }
-//         else if(i < emojis.length){  
-//             emoji.innerText = emojis[i]
-//             i++
-//             console.log(emoji.innerText)
-//         }
-//     }, interval);
-// }
-//       const init = () => {
-//       loadEmojis(emojis);
-// }
-// init();
-
-
-// let i = 0;
-// if(i === emojis.length-1){
-//     i = 0
-//     emoji.innerText = emojis[i]
-//     i++ 
-// }
-// else if(i < emojis.length){  
-//     emoji.innerText = emojis[i]
-//     i++
-// }
-//console.log(emoji.innerText)
-
 
 
 /**********************  DOM Elements  ***********************/
@@ -73,6 +38,8 @@ const delBtn = document.querySelector(".trash")
 
 const quoteFormContainer = document.querySelector(".container")
 const quoteForm = document.querySelector(".add-quote-form")
+
+const alertDiv = document.querySelector(".alert")
 
 const wholePage = document //!!!!!******** is this okay???????????????
 
@@ -95,6 +62,7 @@ fetch(request)
 
        quoteArr = data
        renderOneQuote(quoteArr[arrIndexNum])  
+       alertDiv.style.display = "block"
 
         // data.forEach(eachObj => {
         //   renderOneQuote(eachObj)
