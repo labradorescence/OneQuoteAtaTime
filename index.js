@@ -41,7 +41,7 @@ const quoteForm = document.querySelector(".add-quote-form")
 
 const alertDiv = document.querySelector(".alert")
 
-const wholePage = document //!!!!!******** is this okay???????????????
+const wholePage = document // the whole page
 
 let request = "https://one-quote-at-a-time.herokuapp.com/api/v1/quotes/"
 
@@ -57,15 +57,15 @@ let arrIndexNum = 0
 fetch(request)
     .then(r => r.json())
     .then(data => {
-       // console.log(data)
-       document.querySelector(".preload").style.display = "none"//stop the load 
+    // console.log(data)
+    document.querySelector(".preload").style.display = "none"//stop the load 
 
        quoteArr = data
        renderOneQuote(quoteArr[arrIndexNum])  
        alertDiv.style.display = "block"
 
-        // data.forEach(eachObj => {
-        //   renderOneQuote(eachObj)
+    // data.forEach(eachObj => {
+    //   renderOneQuote(eachObj)
     // }
     //}
     //)
@@ -155,7 +155,7 @@ wholePage.addEventListener("click", e => {
 
 // *** DELETE card *** //
     else if(e.target.className === "trash"){
-        console.log(":-D")
+        //console.log(":-D")
         //debugger
 
         const cardFrame = e.target.closest("#card") 
@@ -175,21 +175,20 @@ wholePage.addEventListener("click", e => {
             }
         })
         //debugger
-        console.log(quoteArr)
+       //console.log(quoteArr)
     }
 
 
 
     // ** buttons to not change ** //
     else if(e.target.className === "pencil"){
-        console.log(":-D")
+       //console.log(":-D")
     }
+
     //debugger
-    else if(e.target.className === "add-quote-form"){ ///i don't think this is working?
-        console.log("form")
-    }
-
-
+    // else if(e.target.className === "add-quote-form"){ //no need
+    //     console.log("form")
+    // }
 
 
     // *** CLICK ANYWHERE => NEXT QUOTE *** //
@@ -227,7 +226,7 @@ function renderOneQuote(eachQuoteObj){
     
     cardFrame.dataset.id = eachQuoteObj.id //for fetch 2 
 
-    //** img */
+    //** img */ //decided not to use img
     // const img = document.createElement("img")
     // img.src = eachQuoteObj.image
     // cardFrame.append(img)
@@ -257,7 +256,7 @@ addBtn.addEventListener("click", (e) => {
     e.preventDefault()
     //console.log(addQuote) //false(currently)
     addQuote = !addQuote //true //if pencilBtn clicked, then turn true
-    console.log(addQuote)//true (now it is)
+    //console.log(addQuote)//true (now it is)
 
     if(addQuote){ //if true
       quoteFormContainer.style.display = "block" //block Element is rendered as a block-level element
